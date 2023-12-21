@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+li{list-style: none;}
+img{max-width: 100%; height: auto;}
+button{background-color: transparent; border: 0; cursor: pointer;}
+
+body{font: normal 16px/1.4 'Open Sans', sans-serif; color: #4d4d4d;}
+
+.wrapper { padding: 20px; }
+
+.driveBlock { border-radius: 20px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); overflow: hidden;}
+.driveImg img{display: block; height: 100%; width: 100%; object-fit: cover; max-height: 310px; }
+.driveInfo { padding: 20px 20px 60px; position: relative;}
+.driveHead{border-bottom: solid 1px #f3f3f3; padding-bottom: 20px; margin-bottom: 20px;}
+.driveTitle{font-size: 20px; margin-bottom: 20px;}
+.iconsSets{display: flex;}
+.iconsSets .buttonsInline {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 4px 15px;
+    border: solid 1px rgba(0, 0, 0, 0.3);;
+    transition: all 0.2s ease;
+}
+
+.iconsSets .buttonsInline:hover { box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);}
+.iconsSets .buttonsInline i{width: 14px; display: block;}
+
+.priceInfo{ display: flex; margin-bottom: 20px;}
+.priceItem{width: 50%;}
+.priceItem .price{font-size: 22px; font-weight: 700; margin-bottom: 10px;}
+.priceFor {display: flex; font-size: 12px;}
+.priceFor .icon{width: 14px; margin-right: 10px;}
+
+.drivePonits{}
+.driveIcon{position: absolute; right: 20px; top: 15px; width: 30%; max-width: 118px; }
+
+.poinstList li{ margin-bottom: 10px; position: relative; padding-left: 30px; color: #5e5e5e;}
+.poinstList li::before{content: url(../images/7.svg); width: 18px; position: absolute; left: 0; top: 1px;}
+
+.bottomButtonSet{position: absolute; bottom: 0; left: 0; width: 100%; display: flex;}
+.bottomButtonSet .buttonsInline{width: 33.33%; padding: 10px; transition: all 0.2s ease;}
+.orangeBG{background-color: #e89240;}
+.greenBG{background-color: #74c96e;}
+.grayBG{background-color: #575759;}
+
+.orangeBG:hover{background-color: #fc7f2b;}
+.greenBG:hover{background-color: #74d463;}
+.grayBG:hover{background-color: #434345;}
+.bottomButtonSet .buttonsInline i img{ width: 22px;}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .driveBlock { border-radius: 10px;}
+    .driveImg{width: 40%; max-width: 413px; }
+    .driveImg img{max-height: 100%;}
+    .contentSection{ position: relative; flex: 1;}
+    .contentSection::after{content: ""; position: absolute; right: -20px; top: 0; height: 100%; border-right:  solid 1px #f3f3f3; }
+    .driveBlock {display: flex; flex-direction: row;}
+    .driveInfo{flex: 1; padding-bottom: 20px; padding-right: 180px; display: flex; flex-direction: column;}
+    .priceInfo{position: absolute; left: calc(100% + 40px); top: 20px; width: 137px; flex-direction: column; margin: 0;}
+    .priceItem{width: auto; margin-top: 20px;}
+    .priceFor {font-size: 14px;}
+    .priceFor .icon{width: 18px;}
+    .driveIcon, .bottomButtonSet{position: static;}
+    .bottomButtonSet{width: auto;}
+    .drivePonits{margin-bottom: 20px;}
+    .drivePonits{display: flex;}
+    .driveIcon{display: flex; align-items: center; margin-right: 20px; width: 118px;  }
+    .bottomButtonSet{border-radius: 25px; overflow: hidden; max-width: 410px;}
+}
